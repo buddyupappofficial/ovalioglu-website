@@ -8,7 +8,7 @@ const contactCards = [
     title: "LinkedIn",
     description: "Profesyonel geçmişim ve güncel çalışmalarım.",
     button: "Profili Gör",
-    href: "https://www.linkedin.com/in/firatovalioglu",
+    href: "https://www.linkedin.com/in/firat-ovalioglu/",
     external: true,
   },
   {

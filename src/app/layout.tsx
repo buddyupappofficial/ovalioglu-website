@@ -21,9 +21,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Fırat Ovalıoğlu — OVALIOGLU",
+  title: "Fırat Ovalıoğlu | Marka ve Dijital Ürün Geliştirme",
   description:
-    "E-commerce leader building brands, digital products and AI-powered experiences.",
+    "15 yılı aşkın süredir e-ticaret, marka yönetimi ve dijital ürün geliştirme alanlarında çalışıyorum. BuddyUp, Laperissa ve yapay zeka destekli yeni nesil dijital ürünler geliştiriyorum.",
 };
 
 export default function RootLayout({
