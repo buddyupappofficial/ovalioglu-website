@@ -12,7 +12,7 @@ export default function AboutBrief() {
     : { initial: "hidden" as const, whileInView: "visible" as const, viewport };
 
   return (
-    <Section glow="neutral">
+    <Section id="about" glow="neutral">
       <div className="mx-auto max-w-2xl text-center">
         <motion.header
           {...headerMotion}
