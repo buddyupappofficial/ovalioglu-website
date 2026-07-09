@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { fadeUp, viewport } from "@/lib/motion";
+import Section from "@/components/ui/Section";
+import { blurReveal, viewport } from "@/lib/motion";
 
 export default function AboutBrief() {
   const prefersReducedMotion = useReducedMotion();
@@ -11,32 +12,33 @@ export default function AboutBrief() {
     : { initial: "hidden" as const, whileInView: "visible" as const, viewport };
 
   return (
-    <section className="relative bg-[#050505] px-6 py-28 sm:px-10 sm:py-36 lg:px-14 lg:py-44">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
-
-      <div className="mx-auto max-w-3xl">
+    <Section glow="neutral">
+      <div className="mx-auto max-w-2xl text-center">
         <motion.header
           {...headerMotion}
-          variants={fadeUp}
+          variants={blurReveal}
           custom={0}
-          className="mb-14 sm:mb-20"
+          className="mb-16 sm:mb-20"
         >
-          <h2 className="font-display text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.02em] text-white">
+          <p className="mb-6 font-mono text-[11px] tracking-[0.28em] text-muted uppercase">
+            About
+          </p>
+          <h2 className="font-display text-[clamp(2rem,5vw,3.25rem)] leading-[1.1] tracking-[-0.02em] text-foreground">
             Kısaca Ben
           </h2>
         </motion.header>
 
-        <div className="space-y-10">
+        <div className="space-y-12">
           <motion.p
             custom={0.1}
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            variants={fadeUp}
-            className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg sm:leading-[1.85]"
+            variants={blurReveal}
+            className="text-[19px] leading-[1.75] font-light tracking-[-0.01em] text-body sm:text-xl"
           >
-            15 yılı aşkın süredir e-ticaret, marka yönetimi ve dijital ürün
-            geliştirme alanlarında çalışıyorum.
+            20 yılı aşkın üretim ve operasyon deneyimini modern yazılım
+            ürünlerine dönüştürüyorum.
           </motion.p>
 
           <motion.p
@@ -44,31 +46,27 @@ export default function AboutBrief() {
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            variants={fadeUp}
-            className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg sm:leading-[1.85]"
+            variants={blurReveal}
+            className="font-display text-[clamp(1.35rem,3vw,1.75rem)] leading-[1.5] tracking-[-0.01em] text-body"
           >
-            Bugün ise markalar kuruyor, dijital ürünler geliştiriyor ve yapay
-            zekâ ile yeni fikirler üretiyorum.
+            Tekstil üretiminden e-ticaret altyapılarına, ürün geliştirmeden
+            otomasyona ve yapay zeka destekli iş akışlarına kadar — sahadaki
+            bilgiyi teknolojiyle birleştiriyorum.
           </motion.p>
 
-          <motion.div
-            custom={0.35}
+          <motion.p
+            custom={0.3}
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            variants={fadeUp}
-            className="border-l border-white/[0.08] pt-2 pl-6 sm:pl-8"
+            variants={blurReveal}
+            className="text-[17px] leading-[1.75] text-muted"
           >
-            <p className="font-display text-[clamp(1.35rem,3vw,1.75rem)] leading-[1.5] tracking-[-0.01em] text-zinc-300">
-              Benim için teknoloji bir amaç değil.
-            </p>
-            <p className="mt-4 font-display text-[clamp(1.35rem,3vw,1.75rem)] leading-[1.5] tracking-[-0.01em] text-zinc-500">
-              İnsanlara gerçek değer sunan fikirleri hayata geçirmek için
-              kullanılan güçlü bir araç.
-            </p>
-          </motion.div>
+            Amacım sistemleri yönetmek değil; gerçek problemleri çözen,
+            ölçeklenebilir dijital ürünler inşa etmek.
+          </motion.p>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { fadeUp, viewport } from "@/lib/motion";
+import Section from "@/components/ui/Section";
+import { blurReveal, viewport } from "@/lib/motion";
 
 export default function Journey() {
   const prefersReducedMotion = useReducedMotion();
@@ -11,122 +12,60 @@ export default function Journey() {
     : { initial: "hidden" as const, whileInView: "visible" as const, viewport };
 
   return (
-    <section className="relative overflow-hidden bg-[#050505] px-6 py-32 sm:px-10 sm:py-40 lg:px-14 lg:py-52">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
-
-      <div
-        className="pointer-events-none absolute inset-0"
-        aria-hidden
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_20%_40%,rgba(255,255,255,0.04),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_80%_70%,rgba(255,255,255,0.025),transparent)]" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl">
+    <Section glow="warm">
+      <div className="mx-auto max-w-2xl">
         <motion.header
           {...headerMotion}
-          variants={fadeUp}
+          variants={blurReveal}
           custom={0}
-          className="mb-20 sm:mb-28 lg:mb-36"
+          className="mb-20 sm:mb-28"
         >
-          <p className="mb-5 font-mono text-[11px] tracking-[0.28em] text-zinc-600 uppercase">
-            JOURNEY
+          <p className="mb-6 font-mono text-[11px] tracking-[0.28em] text-muted uppercase">
+            Experience
           </p>
-          <h2 className="font-display text-[clamp(2.25rem,5.5vw,3.5rem)] leading-[1.08] tracking-[-0.02em] text-white">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,4rem)] leading-[1.05] tracking-[-0.02em] text-foreground">
             Yolculuk
           </h2>
         </motion.header>
 
-        <div className="max-w-2xl">
-          <motion.div
-            custom={0.1}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-            variants={fadeUp}
-            className="space-y-6"
-          >
-            <p className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg">
-              Yıllar boyunca e-ticaret, marka yönetimi ve dijital operasyonlar
-              üzerine çalıştım.
-            </p>
-            <p className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg">
-              Birçok sistem kurdum.
-            </p>
-            <p className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg">
-              Birçok marka büyüttüm.
-            </p>
-          </motion.div>
-
-          <motion.div
-            custom={0.22}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-            variants={fadeUp}
-            className="mt-14 space-y-6 sm:mt-20"
-          >
-            <p className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-500 sm:text-lg">
-              Ancak zamanla şunu fark ettim:
-            </p>
-            <p className="font-display text-[clamp(1.35rem,3vw,1.85rem)] leading-[1.45] tracking-[-0.01em] text-zinc-300">
-              Benim en sevdiğim şey;
-            </p>
-            <p className="font-display text-[clamp(1.35rem,3vw,1.85rem)] leading-[1.45] tracking-[-0.01em] text-zinc-400">
-              hazır sistemleri yönetmek değil,
-            </p>
-            <p className="font-display text-[clamp(1.35rem,3vw,1.85rem)] leading-[1.45] tracking-[-0.01em] text-zinc-200">
-              yeni şeyler inşa etmekti.
-            </p>
-          </motion.div>
-
-          <motion.div
-            custom={0.35}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-            variants={fadeUp}
-            className="mt-16 space-y-6 sm:mt-24"
-          >
-            <p className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg">
-              Bugün;
-            </p>
-            <p className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg">
-              bir yandan{" "}
-              <span className="text-zinc-200">Laperissa</span>&apos;yı
-              geliştiriyor,
-            </p>
-            <p className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg">
-              bir yandan{" "}
-              <span className="text-zinc-200">BuddyUp</span> üzerinde
-              çalışıyor,
-            </p>
-            <p className="font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg">
-              aynı zamanda yapay zekâ ile yeni fikirler üretmeye devam
-              ediyorum.
-            </p>
-            <p className="pt-4 font-sans text-[17px] leading-[1.9] font-light tracking-[-0.01em] text-zinc-500 sm:text-lg">
-              Çünkü benim için öğrenmek ve üretmek hiçbir zaman bitmeyen bir
-              yolculuk.
-            </p>
-          </motion.div>
-        </div>
-
-        <motion.blockquote
-          custom={0.5}
+        <motion.div
+          custom={0.1}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          variants={fadeUp}
-          className="mx-auto mt-32 max-w-4xl text-center sm:mt-40 lg:mt-52"
+          variants={blurReveal}
+          className="space-y-10"
         >
-          <p className="font-display text-[clamp(1.75rem,4.5vw,3.25rem)] leading-[1.35] tracking-[-0.02em] text-zinc-300">
-            &ldquo;En iyi projeler,
-            <br className="hidden sm:block" />
-            {" "}merak etmeyi bırakmayan insanlar tarafından üretilir.&rdquo;
+          <p className="text-[19px] leading-[1.75] font-light text-body sm:text-xl">
+            Yıllar boyunca e-ticaret, marka yönetimi ve dijital operasyonlar
+            üzerine çalıştım. Birçok sistem kurdum. Birçok marka büyüttüm.
+          </p>
+
+          <p className="font-display text-[clamp(1.5rem,3.5vw,2rem)] leading-[1.45] tracking-[-0.01em] text-body">
+            Benim en sevdiğim şey hazır sistemleri yönetmek değil,
+            <span className="text-foreground"> yeni şeyler inşa etmekti.</span>
+          </p>
+
+          <p className="text-[17px] leading-[1.75] text-muted">
+            Bugün Laperissa, BuddyUp ve yapay zekâ ile yeni fikirler üretmeye
+            devam ediyorum.
+          </p>
+        </motion.div>
+
+        <motion.blockquote
+          custom={0.3}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          variants={blurReveal}
+          className="mt-28 text-center sm:mt-36 lg:mt-44"
+        >
+          <p className="font-display text-[clamp(1.5rem,4vw,2.5rem)] leading-[1.35] tracking-[-0.02em] text-body">
+            &ldquo;En iyi projeler, merak etmeyi bırakmayan insanlar tarafından
+            üretilir.&rdquo;
           </p>
         </motion.blockquote>
       </div>
-    </section>
+    </Section>
   );
 }

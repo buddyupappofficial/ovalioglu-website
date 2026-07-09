@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full overflow-x-hidden antialiased`}
     >
-      <body className="min-h-full overflow-x-hidden bg-[#050505]">{children}</body>
+      <body className="min-h-full overflow-x-hidden bg-background">{children}</body>
     </html>
   );
 }

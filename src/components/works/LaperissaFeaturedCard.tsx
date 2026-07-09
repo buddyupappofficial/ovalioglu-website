@@ -46,8 +46,12 @@ export default function LaperissaFeaturedCard() {
 
             <div className="absolute inset-0 flex flex-col justify-between p-8 sm:p-10 lg:p-12">
               <div className="flex items-start justify-between gap-4">
-                <span className="inline-flex items-center rounded-sm border border-[#d4c4a8]/25 bg-[#d4c4a8]/[0.1] px-2.5 py-1 text-[10px] font-medium tracking-[0.25em] text-[#d4c4a8]/90 uppercase backdrop-blur-sm">
-                  Canlı Proje
+                <span className="inline-flex items-center gap-2 rounded-sm border border-emerald-500/20 bg-emerald-500/[0.08] px-2.5 py-1 text-[10px] font-medium tracking-[0.25em] text-emerald-400 uppercase backdrop-blur-sm">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  </span>
+                  Live
                 </span>
                 <span className="font-mono text-[11px] tracking-wider text-white/40 uppercase">
                   02
@@ -59,8 +63,14 @@ export default function LaperissaFeaturedCard() {
                   <h3 className="font-display text-[clamp(2.5rem,6vw,4rem)] leading-[0.95] tracking-[-0.03em] text-[#f5f0e8]">
                     Laperissa
                   </h3>
-                  <p className="mt-3 max-w-xs text-[15px] leading-relaxed font-light text-[#d4c4a8]/80">
-                    Premium iç giyim markası.
+                  <p className="mt-2 font-mono text-[11px] tracking-[0.12em] text-[#6b635a] uppercase">
+                    Digital Commerce Platform.
+                  </p>
+                  <p className="mt-3 max-w-sm text-[15px] leading-relaxed font-light text-[#d4c4a8]/80">
+                    Kadın giyim markası için modern D2C e-ticaret deneyimi.
+                  </p>
+                  <p className="mt-3 font-mono text-[10px] tracking-wider text-[#4a443c]">
+                    laperissa.com.tr
                   </p>
                 </div>
 

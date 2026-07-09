@@ -9,6 +9,7 @@ import {
   Reveal,
   SectionLabel,
 } from "@/components/case-study/CaseStudyUI";
+import BuddyUpLogo from "@/components/ui/BuddyUpLogo";
 import AmbientGlow from "@/components/ui/AmbientGlow";
 import GrainOverlay from "@/components/ui/GrainOverlay";
 
@@ -124,9 +125,12 @@ export default function BuddyUpCaseStudy() {
 
           <Reveal delay={0.08} className="mt-20 sm:mt-28">
             <SectionLabel>Case Study — 01</SectionLabel>
-            <h1 className="font-sans text-[clamp(4rem,14vw,8rem)] font-medium leading-[0.92] tracking-[-0.04em] text-white">
-              BuddyUp
-            </h1>
+            <div className="flex items-center gap-4">
+              <BuddyUpLogo size="lg" />
+              <h1 className="font-sans text-[clamp(4rem,14vw,8rem)] font-medium leading-[0.92] tracking-[-0.04em] text-white">
+                BuddyUp
+              </h1>
+            </div>
             <p className="mt-10 max-w-xl text-[17px] leading-[1.85] font-light tracking-[-0.01em] text-zinc-400 sm:text-lg">
               Aynı şeyleri yapmak isteyen insanları gerçek hayatta bir araya
               getiren sosyal keşif uygulaması.
@@ -392,9 +396,12 @@ export default function BuddyUpCaseStudy() {
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
             <SectionLabel>Coming Soon</SectionLabel>
-            <h2 className="font-display text-[clamp(2.25rem,5.5vw,3.5rem)] leading-[1.1] tracking-[-0.02em] text-white">
-              BuddyUp Yakında
-            </h2>
+            <div className="flex flex-col items-center gap-4">
+              <BuddyUpLogo size="md" />
+              <h2 className="font-display text-[clamp(2.25rem,5.5vw,3.5rem)] leading-[1.1] tracking-[-0.02em] text-white">
+                BuddyUp Yakında
+              </h2>
+            </div>
           </Reveal>
 
           <Reveal delay={0.1} className="mt-12 flex flex-col items-center justify-center gap-4 sm:mt-16 sm:flex-row">

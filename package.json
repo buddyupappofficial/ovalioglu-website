@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "capture:laperissa": "node scripts/capture-laperissa-preview.mjs"
+    "capture:laperissa": "node scripts/capture-laperissa-preview.mjs",
+    "capture:laperissa-global": "node scripts/capture-laperissa-global-preview.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",

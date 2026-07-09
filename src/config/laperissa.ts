@@ -1,14 +1,15 @@
+import type { StaticImageData } from "next/image";
+import homepagePreview from "../../public/works/laperissa/homepage-preview.jpg";
+
 /**
  * Laperissa brand preview configuration.
  *
  * To refresh the homepage screenshot:
  *   npm run capture:laperissa
- *
- * Replace `homepagePreviewSrc` with a new image path after capture or manual upload.
  */
 export const laperissaBrand = {
   websiteUrl: "https://www.laperissa.com.tr",
-  homepagePreviewSrc: "/works/laperissa/homepage-preview.jpg",
+  homepagePreviewSrc: homepagePreview satisfies StaticImageData,
   homepagePreviewAlt: "Laperissa ana sayfa önizlemesi",
   tags: [
     "Shopify",
